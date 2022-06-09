@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Roboto+Slab:wght@100;200;300;400;500;600&display=swap');
+
+:root {
+    --font-fam-primary: 'Poiret One', serif;
+    --font-fam-secondary: 'Roboto Slab', serif;
+    --primary-color: rgb(215, 215, 215);
+    --secondary-color: rgb(22, 22, 22);
+}
+
+/* GLOBAL */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: inline;
+    background-color: rgb(58, 58, 58);
+}
+
+/* NAV */
+
+#title-bar {
+    position: relative;
+    width: 100%;
+    top: -18px;
+    color: var(--font-fam-primary);
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#title {
+    color: var(--primary-color);
+    font-family: var(--font-fam-primary);
+    letter-spacing: 5px;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    #title {
+        font-size: 27px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #title {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    #title {
+        font-size: 21px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #title {
+        font-size: 18px;
+    }
+}
+
+/* BODY */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: var(--primary-color);
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.top-bar-title {
+    font-size: 18px;
+    font-family: var(--font-fam-secondary);
+    font-weight: 400;
+}
+
+.sub-bar {
+    width: 25%;
+    text-align: center;
+    background-color: var(--primary-color);
+    padding-bottom: 10px;
+    border-left: 1px solid rgb(150, 150, 150);
+}
+
+.sub-bar:first-child {
+    border: none;
+}
+
+.sub-bar>span {
+    font-size: 18px;
+    font-family: var(--font-fam-secondary);
+    font-weight: 300;
+}
+
+.edit-section {
+    display: flex;
+    flex-direction: column;
+    width: 97.75%;
+    gap: 20px;
+}
+
+textarea:focus, input:focus{
+    outline: 0;
+}
+
+#counter {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 20px 10px 10px 10px;
+    font-family: var(--font-fam-secondary);
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-top: 1px solid rgb(150, 150, 150);
+    resize: vertical;
+}
+
+#clear-text {
+    padding: 10px 0;
+    color: var(--primary-color);
+    font-family: var(--font-fam-secondary);
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 5px;
+    background-color: rgb(66, 66, 66);
+    border: none;
+}
+
+#clear-text:hover {
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    transition: 500ms ease;
+    transform: scale(.992);
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 500px;
+        transition: 250ms ease;
+    }
+    .top-bar-title {
+        font-size: 15px;
+    }
+    .sub-bar>span {
+            font-size: 15px;
+    }
+    #clear-text {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    main {
+        height: 80vh;
+    }
+    .container {
+        width: 400px;
+    }
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .sub-bar {
+        width: 100%;
+        border: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+    }
+    #counter {
+        padding: 20px 0;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .container {
+        width: 300px;
+    }
+
+    .top-bar-title {
+        font-size: 13px;
+    }
+    .sub-bar>span {
+        font-size: 13px;
+    }
+    #counter {
+        font-size: 13px;
+    }
+    #clear-text {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        width: 290px;
+    }
+    .top-bar-title {
+        font-size: 12px;
+    }
+    .sub-bar>span {
+        font-size: 12px;
+    }   
+    #counter {
+        font-size: 12px;
+    }
+    #clear-text {
+        font-size: 11px;
+    }
+}
