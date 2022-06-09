@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Word Counter</title>
+</head>
+<body>
+    <header id="title-bar">
+        <h1 id='title'>Word Counter</h1>
+    </header>
+    <main>
+        <div class="container">
+            <header class="top-bar">
+                <div class="sub-bar">
+                    <h2 class="top-bar-title">WORD</h2>
+                    <span class="return-word">0</span>
+                </div>
+                <div class="sub-bar">
+                    <h2 class="top-bar-title">CHARACTER</h2>
+                    <span class="return-char">0</span>
+                </div>
+                <div class="sub-bar">
+                    <h2 class="top-bar-title">SENTENCE</h2>
+                    <span class="return-sen">0</span>
+                </div>
+                <div class="sub-bar">
+                    <h2 class="top-bar-title">PARAGRAPH</h2>
+                    <span class="return-par">0</span>
+                </div>
+            </header>
+            <div class="edit-section">
+                <textarea name="counter" id="counter" cols="30" rows="15" placeholder="Enter text here..."></textarea>
+                <button id="clear-text">CLEAR TEXT</button>
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
